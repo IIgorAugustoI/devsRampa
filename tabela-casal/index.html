@@ -1,52 +1,76 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Dispesas casal</title>
-        <link rel="stylesheet" href="styles.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Spline+Sans:wght@400;700&display=swap" rel="stylesheet">  
-        <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet"> 
-    </head>
-    <body> 
-        <header>
-            <h1>Despesas do Casal</h1>
-        </header>
-            <main>
-                <form class="formulario-principal">
-                    <label for="nome">Nome</label>
-                    <input type="text" name="nome" id="nome" class="padrao" required placeholder="Seu nome">
 
-                    <label for="despesa">Despesas pagas</label>
-                    <input type="number" name="despesa" id="despesa" class="padrao" required>   
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dispesas casal</title>
+    <script type="text/javascript" src="main.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Spline+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+</head>
 
-                    <label for="pago">% Pago</label>
-                    <input type="number" name="pago" id="pago" class="padrao" required>
+<body>
+    <header>
+        <h1>Despesas do Casal</h1>
+    </header>
+    <main>
+        <div class="cod">
+            <form class="formulario-principal">
 
-                    <label for="valor">Valor devido</label>
-                    <input type="number" name="valor" id="valor" class="padrao" required>
+                <label for="despesa">Despesas</label>
+                <input type="number" name="despesa" id="despesa" class="padrao" required>
 
-                    <label for="saldo" >Saldo</label>
-                    <input type="number" name="saldo" id="saldo" class="padrao" required>
+                <label for="pago">% Pago</label>
+                <input type="number" name="pago" id="pago" class="padrao" required>
 
-                    <input type="button" value="Enviar formulário" class="botao-enviar" 
-                    onclick="adicionaPessoa(nome.value, despesa.value, pago.value, valor.value , saldo.value)">
-                </form>
-            <table id="tabela" class="tabela-principal">
-                <thead>
-                    <tr class="celula">
-                        <th class="nome">nome</th>                    
-                        <th class="despesa">Despesas a pagar</th>
-                        <th class="pagar">Pago</th>
-                        <th class="valor">Valor devido</th>
-                        <th class="saldo">Saldo</th>
-                    </tr>
-                </thead>
-            </table>
-        </main>
-        <script src="index.js"></script>
-    </body>
+                <label for="valor">Valor devido</label>
+                <input type="number" name="valor" id="valor" class="padrao" required>
+
+                <input type="button" value="Enviar formulário" class="botao-enviar" onclick="adicionaPessoa(despesa.value, pago.value, valor.value)">
+        </div>
+        </form>
+        </form>
+        <table id="tabela" class="tabela-principal">
+            <thead>
+                <tr class="celula">
+                    <th class="item">ITEM</th>
+                    <th class="conjuge1">Cônjuge 1</th>
+                    <th class="conjuge2">Conjugê 2</th>
+                    <th class="total">Total</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td> Despesas pagas</td>
+                    <td id="despesa-conjuge1">&nbsp;</td>
+                    <td id="despesa-conjuge2">&nbsp;</td>
+                    <td id="despesa-total">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td> %Pago</td>
+                    <td id="pago-conjuge1">&nbsp;</td>
+                    <td id="pago-conjuge2">&nbsp;</td>
+                    <td id="pago-total">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td> Valor devido</td>
+                    <td id="valor-conjuge1">&nbsp;</td>
+                    <td id="valor-conjuge2">&nbsp;</td>
+                    <td id="valor-total">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td> Saldo</td>
+                    <td id="saldo-conjuge1">&nbsp;</td>
+                    <td id="saldo-conjuge2">&nbsp;</td>
+                    <td id="saldo-total">&nbsp;</td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+</body>
 </html>
