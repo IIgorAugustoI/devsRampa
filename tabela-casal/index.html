@@ -6,7 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dispesas casal</title>
-    <script type="text/javascript" src="main.js"></script>
+    <script>
+        type = "tex/javascript"
+        src = "main.js"
+    </script>
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,58 +22,136 @@
         <h1>Despesas do Casal</h1>
     </header>
     <main>
-        <div class="cod">
-            <form class="formulario-principal">
+        <div class="form-principal">
+            <div class="cod">
+                <form class="formulario-principal">
 
-                <label for="despesa">Despesas</label>
-                <input type="number" name="despesa" id="despesa" class="padrao" required>
+                    <label for="despesa">Despesas</label>
+                    <input type="text" name="despesa" id="despesa" class="padrao" required>
 
-                <label for="pago">% Pago</label>
-                <input type="number" name="pago" id="pago" class="padrao" required>
+                    <label for="despesa">Receita</label>
+                    <input type="text" name="receita" id="receita" class="padrao" required>
+                    <input type="button" value="Enviar formulário" class="botao-enviar" onclick="adicionaPessoa(despesa.value, receita.value)">
 
-                <label for="valor">Valor devido</label>
-                <input type="number" name="valor" id="valor" class="padrao" required>
-
-                <input type="button" value="Enviar formulário" class="botao-enviar" onclick="adicionaPessoa(despesa.value, pago.value, valor.value)">
-        </div>
-        </form>
-        </form>
-        <table id="tabela" class="tabela-principal">
-            <thead>
-                <tr class="celula">
-                    <th class="item">ITEM</th>
-                    <th class="conjuge1">Cônjuge 1</th>
-                    <th class="conjuge2">Conjugê 2</th>
-                    <th class="total">Total</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td> Despesas pagas</td>
-                    <td id="despesa-conjuge1">&nbsp;</td>
-                    <td id="despesa-conjuge2">&nbsp;</td>
-                    <td id="despesa-total">&nbsp;</td>
-                </tr>
-                <tr>
-                    <td> %Pago</td>
-                    <td id="pago-conjuge1">&nbsp;</td>
-                    <td id="pago-conjuge2">&nbsp;</td>
-                    <td id="pago-total">&nbsp;</td>
-                </tr>
-                <tr>
-                    <td> Valor devido</td>
-                    <td id="valor-conjuge1">&nbsp;</td>
-                    <td id="valor-conjuge2">&nbsp;</td>
-                    <td id="valor-total">&nbsp;</td>
-                </tr>
-                <tr>
-                    <td> Saldo</td>
-                    <td id="saldo-conjuge1">&nbsp;</td>
-                    <td id="saldo-conjuge2">&nbsp;</td>
-                    <td id="saldo-total">&nbsp;</td>
-                </tr>
-            </tbody>
-        </table>
+                </form>
+                <h2>Cálculo caso 1: Despesa Casal</h2>
+                <table id="tabela" class="tabela-principal">
+                    <thead>
+                        <tr class="celula">
+                            <th class="item">ITEM</th>
+                            <th class="conjuge1">Cônjuge 1</th>
+                            <th class="conjuge2">Conjugê 2</th>
+                            <th class="total">Total</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td> Despesas pagas</td>
+                            <td class="despesa-conjuge1">&nbsp;</td>
+                            <td class="despesa-conjuge2">&nbsp;</td>
+                            <td class="despesa-total">&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td> %Pago</td>
+                            <td class="pago-conjuge1">&nbsp;</td>
+                            <td class="pago-conjuge2">&nbsp;</td>
+                            <td class="pago-total">&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td> Valor devido</td>
+                            <td class="valor-conjuge1">&nbsp;</td>
+                            <td class="valor-conjuge2">&nbsp;</td>
+                            <td class="valor-total">&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td> Saldo</td>
+                            <td class="saldo-conjuge1">&nbsp;</td>
+                            <td class="saldo-conjuge2">&nbsp;</td>
+                            <td class="saldo-total">&nbsp;</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="form-segunda">
+                <h2>Cálculo caso 2: 60% para o Cônjuge 1</h2>
+                <table id="tabela" class="tabela-principal">
+                    <thead>
+                        <tr class="celula">
+                            <th class="form2-item">ITEM</th>
+                            <th class="form2-conjuge1">Cônjuge 1</th>
+                            <th class="form2-conjuge2">Conjugê 2</th>
+                            <th class="form2-total">Total</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td> Despesas pagas</td>
+                            <td class="form2-despesa-conjuge1">&nbsp;</td>
+                            <td class="form2-despesa-conjuge2">&nbsp;</td>
+                            <td class="form2-despesa-total">&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td> %Pago</td>
+                            <td class="form2-pago-conjuge1">&nbsp;</td>
+                            <td class="form2-pago-conjuge2">&nbsp;</td>
+                            <td class="form2-pago-total">&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td> Valor devido</td>
+                            <td class="form2-valor-conjuge1">&nbsp;</td>
+                            <td class="form2-valor-conjuge2">&nbsp;</td>
+                            <td class="form2-valor-total">&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td> Saldo</td>
+                            <td class="form2-saldo-conjuge1">&nbsp;</td>
+                            <td class="form2-saldo-conjuge2">&nbsp;</td>
+                            <td class="form2-saldo-total">&nbsp;</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="form-terceira">
+                <h2>Cálculo caso 3: Despesas proporcional a renda</h2>
+                <table id="tabela" class="tabela-principal">
+                    <thead>
+                        <tr class="celula">
+                            <th class="form3-item">ITEM</th>
+                            <th class="form3-conjuge1">Cônjuge 1</th>
+                            <th class="form3-conjuge2">Conjugê 2</th>
+                            <th class="form3-total">Total</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td> Despesas pagas</td>
+                            <td class="form3-despesa-conjuge1">&nbsp;</td>
+                            <td class="form3-despesa-conjuge2">&nbsp;</td>
+                            <td class="form3-despesa-total">&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td> %Pago</td>
+                            <td class="form3-pago-conjuge1">&nbsp;</td>
+                            <td class="form3-pago-conjuge2">&nbsp;</td>
+                            <td class="form3-pago-total">&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td> Valor devido</td>
+                            <td class="form3-valor-conjuge1">&nbsp;</td>
+                            <td class="form3-valor-conjuge2">&nbsp;</td>
+                            <td class="form3-valor-total">&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td> Saldo</td>
+                            <td class="form3-saldo-conjuge1">&nbsp;</td>
+                            <td class="form3-saldo-conjuge2">&nbsp;</td>
+                            <td class="form3-saldo-total">&nbsp;</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
     </main>
+    <script type="text/javascript" src="./main.js"></script>
 </body>
+
 </html>

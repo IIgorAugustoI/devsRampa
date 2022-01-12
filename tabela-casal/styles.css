@@ -1,4 +1,5 @@
-/* RESET CSS */ 
+/* RESET CSS */
+
 * {
     margin: 0;
     padding: 0;
@@ -31,12 +32,13 @@ main {
     height: 80%;
 }
 
-.formulario-principal, .tabela-principal {
+.formulario-principal,
+.tabela-principal {
     margin: 40px;
 }
 
 label {
-	display: block;
+    display: block;
     font-size: 18px;
     margin: 10px 0 10px;
 }
@@ -45,7 +47,6 @@ label {
     display: block;
     padding: 5px;
     width: 20%;
-
 }
 
 .botao-enviar {
@@ -69,10 +70,16 @@ label {
 
 table {
     margin: 20px 0;
-    
 }
 
-tr, th, td {
+tr,
+th,
+td {
     border: 2px solid #000;
     padding: 5px 15px;
+}
+
+h2 {
+    margin: 10px 0 0 40px;
+    font-size: 18px;
 }
