@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="main.js"></script>
+        <title>Despesa Casal</title>
+        <link rel="stylesheet" href="reset.css">
+        <link rel="stylesheet" href="styles.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Luxurious+Roman&family=Outfit:wght@400;700&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <h1>Despesa Casal</h1>
+        </header>
+        <main> 
+            <section class="campo-formulario">
+                <form>
+                    <label for="conjuge1" class="conjuge">Cônjuge 1</label>
+
+                    <label for="despesa">Despesas:</label>
+                    <input type="number" name="despesa" id="input-despesa"class="formulario" placeholder="Valor da sua despesa">
+
+                    <label for="receita">Receita:</label>
+                    <input type="number" name="receita" id="input-receita" class="formulario" placeholder="Valor da sua receita"> 
+
+                    <input type="button" value="Enviar formulário"class="botao">
+                </form>
+                <form>
+                    <label for="conjuge2" class="conjuge">Cônjuge 2</label>
+
+                    <label for="despesa">Despesas:</label>
+                    <input type="number" name="despesa" id="input-despesa-form2"class="formulario" placeholder="Valor da sua despesa">
+
+                    <label for="receita">Receita:</label>
+                    <input type="number" name="receita" id="input-receita-form2"class="formulario" placeholder="Valor da sua receita"> 
+
+                    <input type="button" value="Enviar formulário"class="botao" adicionarPessoa(despesa.value, receita.value)>
+                </form>
+            </section>
+            <section class="tabela">
+                <table class="tabela">
+                    <caption>Tabela - Despesa casal:</caption>
+                    <thead>
+                        <tr class="cabecalho-tabela">
+                            <th id="item" class="celula">ITEM</th>
+                            <th id="conjuge1" class="celula">Cônjuge 1</th>
+                            <th id="conjuge2" class="celula">Cônjuge 2</th>
+                            <th id="total" class="celula">Total</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr id="linha-despesa">
+                            <td id="despesa-paga" class="despesa">Despesa Paga</td>
+                            <td id="despesa1" class="despesa">&nbsp;</td>
+                            <td id="despesa2" class="despesa">&nbsp;</td>
+                            <td id="despesa-total" class="despesa">&nbsp;</td>
+                        </tr>
+                        <tr id="linha-portentagem">
+                            <td class="porcentagem">%Pago</td>
+                            <td id="porcentagem1" class="porcentagem">&nbsp;</td>
+                            <td id="porcentagem2" class="porcentagem">&nbsp;</td>
+                            <td id="porcentagem-total" class="porcentagem">&nbsp;</td>
+                        </tr>
+                        <tr id="linha-valor-devido">
+                            <td class="valor-devido">Valor devido</td>
+                            <td id="valor1" class="valor-devido">&nbsp;</td>
+                            <td id="valor2" class="valor-devido">&nbsp;</td>
+                            <td id="valor-total" class="valor-devido">&nbsp;</td>
+                        </tr>
+                        <tr id="linha-saldo">
+                            <td class="saldo">Saldo</td>
+                            <td id="saldo1" class="saldo">&nbsp;</td>
+                            <td id="saldo2" class="saldo">&nbsp;</td>
+                            <td id="saldo-total" class="saldo">&nbsp;</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </main>
+    </body>
+</html>
