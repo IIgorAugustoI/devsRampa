@@ -22,25 +22,27 @@ header h1 {
     font-weight: bold;
 }
 
-form {
-    display: inline-block;
-    margin: 40px;
-}
 
 main {
     margin: 20px 40px;
+}
+
+form {
+    display: inline-block;
+}
+
+.campo-formulario {
+    
+    margin: 20px 0;
+    font-size: 20px;
+    
 }
 
 .conjuge {
     padding: 10px 0;
 }
 
-.campo-formulario {
-    margin: 20px 0;
-    font-size: 20px;
-    align-items: center;
-    justify-content: center;
-}
+
 
 label {
     display: block;

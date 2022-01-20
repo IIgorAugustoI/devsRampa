@@ -19,26 +19,28 @@
         <main> 
             <section class="campo-formulario">
                 <form>
-                    <label for="conjuge1" class="conjuge">Cônjuge 1</label>
+                    <div class="formulario-conjuge1">
+                        <label for="conjuge1" class="conjuge">Cônjuge 1</label>
 
-                    <label for="despesa">Despesas:</label>
-                    <input type="number" name="despesa" id="input-despesa"class="formulario" placeholder="Valor da sua despesa">
+                        <label for="despesa">Despesas:</label>
+                        <input type="number" name="despesa" id="input-despesa"class="formulario" placeholder="Valor da sua despesa">
+    
+                        <label for="receita">Receita:</label>
+                        <input type="number" name="receita" id="input-receita" class="formulario" placeholder="Valor da sua receita"> 
+    
+                    </div>
 
-                    <label for="receita">Receita:</label>
-                    <input type="number" name="receita" id="input-receita" class="formulario" placeholder="Valor da sua receita"> 
+                    <div class="formulario-conjuge2">
+                        <label for="conjuge2" class="conjuge">Cônjuge 2</label>
 
-                    <input type="button" value="Enviar formulário"class="botao">
-                </form>
-                <form>
-                    <label for="conjuge2" class="conjuge">Cônjuge 2</label>
-
-                    <label for="despesa">Despesas:</label>
-                    <input type="number" name="despesa" id="input-despesa-form2"class="formulario" placeholder="Valor da sua despesa">
-
-                    <label for="receita">Receita:</label>
-                    <input type="number" name="receita" id="input-receita-form2"class="formulario" placeholder="Valor da sua receita"> 
-
-                    <input type="button" value="Enviar formulário"class="botao" adicionarPessoa(despesa.value, receita.value)>
+                        <label for="despesa">Despesas:</label>
+                        <input type="number" name="despesa" id="input-despesa-form2"class="formulario" placeholder="Valor da sua despesa">
+    
+                        <label for="receita">Receita:</label>
+                        <input type="number" name="receita" id="input-receita-form2"class="formulario" placeholder="Valor da sua receita"> 
+    
+                    </div>
+                    <button id="botao-adicionar" class="botao">Enviar formulário</button>
                 </form>
             </section>
             <section class="tabela">

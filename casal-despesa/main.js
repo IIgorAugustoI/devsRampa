@@ -2,12 +2,15 @@ function limparcampos(){
     document.getElementById("input-despesa").value = '';
     document.getElementById("input-receita").value = '';
     document.getElementById("input-despesa-form2").value = '';
-    document.getElementById("input-receita-from2").value = '';
+    document.getElementById("input-receita-form2").value = '';
 
     document.getElementById("input-despesa").focus();
 }
 
-var conjujes = [];
+var botao = document.querySelector(".botao");
 
-function adicionarPessoa(despesa, receita) {
-}
+botao.addEventListener("click", function evento (event){
+    event.preventDefault();
+    limparcampos();
+    console.log("Noob")
+})
