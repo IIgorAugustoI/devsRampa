@@ -53,6 +53,19 @@ input {
     display: block;
 }
 
+fieldset {
+    display: block;
+}
+
+legend {
+    padding: 0 0 10px 0;
+}
+
+fieldset label {    
+    font-size: 12px;
+    margin: 0 0;
+}
+
 .botao {
     border-radius: 20px;
     background: red;
