@@ -7,8 +7,6 @@ function limparCampos(){
     document.getElementById("despesa").focus();
 }
 
-
-
 var botaoAdicionar = document.getElementById("adicionar-pessoa");
 
 botaoAdicionar.addEventListener("click", function (event) {
@@ -16,37 +14,46 @@ botaoAdicionar.addEventListener("click", function (event) {
 
     var form = document.querySelector(".formulario-conjuge");
 
-    var despesaConjuge1 = form.despesa.value;
-    var receitaConjuge1 = form.receita.value;
-    var despesaConjuge2 = form.despesa2.value;
-    var receitaConjuge2 = form.receita2.value;
+    var despesaConjuge1 = Number(form.despesa.value);
+    var receitaConjuge1 = Number(form.receita.value);
+    var despesaConjuge2 = Number(form.despesa2.value);
+    var receitaConjuge2 = Number(form.receita2.value);
 
-    console.log(despesaConjuge1);
-    console.log(receitaConjuge1);
-    console.log(despesaConjuge2);
-    console.log(receitaConjuge2);
+    var despesaTotal = despesaConjuge1 + despesaConjuge2;
+
+    var porcentagemPagaConjuge1 = ((despesaConjuge1 / despesaTotal) * 100).toFixed(2);
+    var porcentagemPagaConjuge2 = ((despesaConjuge2 / despesaTotal) * 100).toFixed(2);
+    var porcentagemPagaTotal = 100;
+
+    var valorDevidoConjuge1 = (despesaTotal / 2).toFixed(2);
+    var valorDevidoConjuge2 = (despesaTotal / 2).toFixed(2);
+    var valorDevidoTotal = valorDevidoConjuge1 + valorDevidoConjuge2;
+
+    var saldoConjuge1 = despesaConjuge1 - valorDevidoConjuge1;
+    var saldoConjuge2 = despesaConjuge2 - valorDevidoConjuge2;
 
 
     limparCampos();
-    escreverTabela();
-
+    escreverTabela(despesaConjuge1, despesaConjuge2, despesaTotal, porcentagemPagaConjuge1, porcentagemPagaConjuge2, porcentagemPagaTotal,valorDevidoConjuge1, valorDevidoConjuge2, valorDevidoTotal ,saldoConjuge1, saldoConjuge2);
 });
 
 
-function escreverTabela(tabelaDespesaConjuge1, tabelaDespesaConjuge2,tabelaDespesaTotal, tabelaPagaConjuge1,tabelaPagaConjuge2, tabelaPagaTotal,tabelaValorConjuge1,tabelaValorConjuge2, tabelaValorTotal, tabelaSaldoConjuge1, tabelaSaldoConjuge2, tabelaSaldoTotal){
-    var tabelaDespesaConjuge1 = document.querySelector("#despesa1");
-    var tabelaDespesaConjuge2 = document.querySelector("#despesa2");
-    var tabelaDespesaTotal = document.querySelector("#despesa-total");
 
-    var tabelaPagaConjuge1 = document.querySelector("#porcentagem1");
-    var tabelaPagaConjuge2 = document.querySelector("#porcentagem2");
-    var tabelaPagaTotal = document.querySelector("#porcentagem-total");
+function escreverTabela(despesaConjuge1, despesaConjuge2, despesaTotal, porcentagemPagaConjuge1, porcentagemPagaConjuge2, porcentagemPagaTotal,valorDevidoConjuge1, valorDevidoConjuge2, valorDevidoTotal ,saldoConjuge1, saldoConjuge2){
+    
+    document.querySelector("#celula-despesa1").textContent = despesaConjuge1.toFixed(2);
+    document.querySelector("#celula-despesa2").textContent = despesaConjuge2.toFixed(2);
+    document.querySelector("#despesa-total").textContent = despesaTotal.toFixed(2);
 
-    var tabelaValorConjuge1 = document.querySelector("#valor1");
-    var tabelaValorConjuge2 = document.querySelector("#valor2");
-    var tabelaValorTotal = document.querySelector("#valor-total");
+    document.querySelector("#porcentagem1").textContent = porcentagemPagaConjuge1;
+    document.querySelector("#porcentagem2").textContent = porcentagemPagaConjuge2;
+    document.querySelector("#porcentagem-total").textContent = porcentagemPagaTotal;
 
-    var tabelaSaldoConjuge1 = document.querySelector("#saldo1");
-    var tabelaSaldoConjuge2 = document.querySelector("#saldo2");
-    var tabelaSaldoTotal = document.querySelector("#saldo-total");
+    document.querySelector("#valor1").textContent = valorDevidoConjuge1;
+    document.querySelector("#valor2").textContent = valorDevidoConjuge2;
+    document.querySelector("#valor-total").textContent = valorDevidoTotal;
+
+    document.querySelector("#saldo1").textContent = saldoConjuge1.toFixed(2);
+    document.querySelector("#saldo2").textContent = saldoConjuge2.toFixed(2);
+    document.querySelector("#saldo-total").textContent = "saldo";
 }
