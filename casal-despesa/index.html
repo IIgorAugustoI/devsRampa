@@ -4,7 +4,6 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <script src="main.js"></script>
         <title>Despesa Casal</title>
         <link rel="stylesheet" href="reset.css">
         <link rel="stylesheet" href="styles.css">
@@ -18,29 +17,26 @@
         </header>
         <main> 
             <section class="campo-formulario">
-                <form>
-                    <div class="formulario-conjuge1">
+                <form class="formulario-conjuge">
+                    <div class="primeiro-campo">
                         <label for="conjuge1" class="conjuge">Cônjuge 1</label>
 
                         <label for="despesa">Despesas:</label>
-                        <input type="number" name="despesa" id="input-despesa"class="formulario" placeholder="Valor da sua despesa">
-    
-                        <label for="receita">Receita:</label>
-                        <input type="number" name="receita" id="input-receita" class="formulario" placeholder="Valor da sua receita"> 
-    
-                    </div>
+                        <input type="number" name="despesa" id="despesa" class="formulario" placeholder="Valor da sua despesa">
 
-                    <div class="formulario-conjuge2">
+                        <label for="receita">Receita:</label>
+                        <input type="number" name="receita" id="receita" class="formulario" placeholder="Valor da sua receita"> 
+                    </div>
+                    <div class="segundo-campo">
                         <label for="conjuge2" class="conjuge">Cônjuge 2</label>
 
-                        <label for="despesa">Despesas:</label>
-                        <input type="number" name="despesa" id="input-despesa-form2"class="formulario" placeholder="Valor da sua despesa">
+                        <label for="despesa2">Despesas:</label>
+                        <input type="number" name="despesa2" id="despesa2" class="formulario" placeholder="Valor da sua despesa">
     
-                        <label for="receita">Receita:</label>
-                        <input type="number" name="receita" id="input-receita-form2"class="formulario" placeholder="Valor da sua receita"> 
-    
+                        <label for="receita2">Receita:</label>
+                        <input type="number" name="receita2" id="receita2" class="formulario" placeholder="Valor da sua receita">
                     </div>
-                    <button id="botao-adicionar" class="botao">Enviar formulário</button>
+                    <button id="adicionar-pessoa" class="botao">Enviar formulário</button>
                 </form>
             </section>
             <section class="tabela">
@@ -83,5 +79,6 @@
                 </table>
             </section>
         </main>
+        <script src="main.js"></script>
     </body>
 </html>
