@@ -48,7 +48,7 @@ label {
 input {
     margin: 5px 0;
     padding: 10px;
-    display: block;
+    display: inline-block;
 }
 
 fieldset {
@@ -60,7 +60,7 @@ legend {
 }
 
 fieldset label {    
-    font-size: 12px;
+    font-size: 14px;
     margin: 0 0;
 }
 
