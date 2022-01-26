@@ -33,7 +33,6 @@ botaoAdicionar.addEventListener("click", function (event) {
     var opcoes = document.getElementsByName("radio");
     
     if(opcoes[0].checked){
-        alert("Você escolheu dividir meio a meio");
          porcentagemPagaConjuge1 = ((despesaConjuge1 / despesaTotal) * 100).toFixed(2);
          porcentagemPagaConjuge2 = ((despesaConjuge2 / despesaTotal) * 100).toFixed(2);
          valorDevidoConjuge1 = (despesaTotal / 2);
@@ -43,7 +42,6 @@ botaoAdicionar.addEventListener("click", function (event) {
          saldoConjuge2 = despesaConjuge2 - valorDevidoConjuge2;
 
     } else if (opcoes[1].checked){
-        alert("Você escolheu divisão 60%");
          porcentagemPagaConjuge1 = 60;
          porcentagemPagaConjuge2 = 40;
          valorDevidoConjuge1 = despesaTotal * 0.60;
@@ -53,7 +51,6 @@ botaoAdicionar.addEventListener("click", function (event) {
          saldoConjuge2 = despesaConjuge2 - valorDevidoConjuge2;
 
     } else if (opcoes[2].checked){
-        alert("Você escolheu proporcionalmente a redenda");
         if(receitaConjuge1 > receitaConjuge2) {
             porcentagemPagaConjuge1 = ((receitaConjuge1 * 100) / despesaTotal).toFixed(2);
             resultadoPorcentagem = ((porcentagemPagaConjuge1 - 100) * (-1)).toFixed(2);
